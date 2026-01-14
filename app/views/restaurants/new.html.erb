@@ -1,0 +1,11 @@
+<h1 class="mb-3">New restaurant</h1>
+
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: Restaurant::CATEGORIES %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
+<%= link_to "Back", restaurants_path, class: "btn btn-link mt-3" %>
